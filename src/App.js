@@ -3,6 +3,7 @@ import { Form } from "./components/Form"
 import { MessageList } from "./components/MessageList"
 import { nanoid } from 'nanoid'
 import './App.css'
+import {ChatsList} from "./components/ChatsList";
 
 const StartChat = [
     {
@@ -38,13 +39,17 @@ export const App = () => {
          ])
      }
 
-    console.log(messages)
-
     return (
         <>
-            <h1>Chat room React JS</h1>
-            <MessageList messages={messages}/>
-            <Form addMessage={addMessage}/>
+          <div className='chat-list'>
+              <h3>Themes Chats</h3>
+              <ChatsList />
+          </div>
+          <div className='message-list'>
+              <h1>Chat room React JS</h1>
+              <MessageList messages={messages}/>
+              <Form addMessage={addMessage}/>
+          </div>
         </>   
     )
 }
