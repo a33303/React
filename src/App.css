@@ -1,14 +1,3 @@
-body {
-    background-color: black;
-    background-image: url(https://steamuserimages-a.akamaihd.net/ugc/92729171389439270/3D52D02FAC5931758F7940F560F47A26666CD3DD/);
-    margin: auto;
-}
-
-h1 {
-    font-family: 'Bungee Shade', cursive;
-    color: #fcba03;
-    font-size: 80px;
-    position: relative;
-    text-align: center;
-    padding: 3% 0 0 0;
+.li {
+    list-style-type: none;
 }
