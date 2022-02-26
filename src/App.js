@@ -9,7 +9,7 @@ const StartChat = [
     {
         id:nanoid(),
         author: 'Alex',
-        text: 'Hi, Lesson 2 React JS'
+        text: 'Hi, Lesson 4 React JS'
     }
 ]
 
