@@ -2,9 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    devtool: "eval-cheap-source-map",
     entry: path.resolve(__dirname, './src/index.js'),
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx','.ts', '.tsx'],
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -23,6 +24,11 @@ module.exports = {
             {
                 test:/\.css$/i,
                 use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.js$/,
+                enforce: 'pre',
+                use: ['source-map-loader'],
             },
         ],
     },
