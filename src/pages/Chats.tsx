@@ -1,11 +1,21 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import { Form } from '../components/Form'
-import { MessageList } from '../components/MessageList'
+import { Form } from 'components/Form'
+import { MessageList } from 'components/MessageList'
 import { nanoid } from 'nanoid'
 import { useParams, Redirect } from 'react-router-dom'
 import {ListItemButton, ListItemText} from "@mui/material"
 
-const StartChat = {
+export interface Message {
+    id: string;
+    text: string;
+    author: string;
+}
+
+export interface StartChat {
+    [key: string]: Message[];
+}
+
+const defaultMessages:       StartChat = {
     Interesting: [
         {
             id:'1',
