@@ -1,5 +1,5 @@
 import React from "react";
-import { Message } from '../pages/Chats';
+import { Message } from '../App';
 
 interface MessageListProp {
     messages: Message[];

@@ -1,18 +1,5 @@
-import React from "react"
-import {Button, TextField} from "@mui/material"
+import React from 'react';
 
-export function HomePage() {
-    return (
-        <>
-            <h1>Hello main page!</h1>
-            <TextField
-                id="outlined-basic"
-                label="Enter to Nickname"
-                variant="outlined"
-                type="text"
-                autoFocus={true}
-            />
-            <Button type="submit">Вход</Button>
-        </>
-    )
-}
+export const HomePage = () => {
+  return <h2>Hello to main page</h2>;
+};

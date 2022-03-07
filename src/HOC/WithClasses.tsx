@@ -1,15 +1,17 @@
-import React from "react";
+import React from 'react';
 
 type WithClassesProp = {
-    classes: string;
-}
+  classes: string;
+};
 
-export function WithClasses<T>(WrappedComponent: React.ComponentType<T & WithClassesProp>) {
-    return function Wrapper(props: T & WithClassesProp) {
-        return (
-            <div className={props.classes}>
-                <WrappedComponent {...props} />
-            </div>
-        )
-    }
+export function WithClasses<T>(
+  WrappedComponent: React.ComponentType<T & WithClassesProp>
+) {
+  return function Wrapper(props: T & WithClassesProp) {
+    return (
+      <div className={props.classes}>
+        <WrappedComponent {...props} />
+      </div>
+    );
+  };
 }

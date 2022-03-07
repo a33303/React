@@ -1,53 +1,48 @@
-import React, { useContext, useState } from "react";
-import { Button, TextField } from "@mui/material";
-import { ThemeContext} from "../utils/ThemeContext";
-
+import React, { useState, FC, useContext } from 'react';
+import { Input, Button } from '@mui/material';
+import { ThemeContext } from '../utils/ThemeContext';
 interface Message {
-    text: string;
-    author: string;
+  text: string;
+  author: string;
 }
 
 interface FormProps {
-    addMessage: (message: Message) => void;
+  addMessage: (message: Message) => void;
 }
 
+export const Form: FC<FormProps> = ({ addMessage }) => {
+  const { dark, toggleDark } = useContext(ThemeContext);
 
-export const Form: React.FC <FormProps> = ({ addMessage }) => {
-    const {dark, toggleDark} = useContext(ThemeContext);
+  const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    if (toggleDark) {
+      toggleDark();
+    }
+  };
 
-    const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault();
-        if (toggleDark) {
-            toggleDark();
-        }
-    };
+  const [text, setText] = useState('');
 
-    const [text, setText] = useState('');
+  const handleText = (ev: React.FormEvent<HTMLFormElement>) => {
+    ev.preventDefault();
+    addMessage({
+      text,
+      author: 'User',
+    });
+    setText('');
+  };
 
-    const addText = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        addMessage({
-            text,
-            author: 'User'
-        });
-        setText('');
-    };
+  return (
+    <>
+      <form onSubmit={handleText}>
+        <Input value={text} onChange={(ev) => setText(ev.target.value)} />
 
-    return (
-        <>
-            <form onSubmit={addText}>
-                <TextField
-                    id="outlined-basic"
-                    label="Enter to message"
-                    variant="outlined"
-                    type="text"
-                    value={text}
-                    autoFocus={true}
-                    onChange={(ev) => setText(ev.target.value)}/>
-                <Button type="submit">Send</Button>
-            </form>
-            <h1>{dark ? '🌙' : '🌞'}</h1>
-            <Button onClick={handleOnClick}>Change theme</Button>
-        </>
-    );
+        <Button variant="contained" type="submit">
+          Send
+        </Button>
+      </form>
+
+      <h1>{dark ? '🌙' : '🌞'}</h1>
+      <button onClick={handleOnClick}>Toggle dark mode</button>
+    </>
+  );
 };
