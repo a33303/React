@@ -1,8 +1,8 @@
-import React from 'react'
-import {Button, TextField} from "@mui/material"
+import React from 'react';
+import {Button, TextField} from "@mui/material";
 
 
-export function Profile() {
+export const Profile: React.FC = () => {
     return (
             <form action="">
                 <h1>Profile</h1>
