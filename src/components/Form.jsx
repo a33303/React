@@ -1,4 +1,6 @@
 import React, { useState } from "react"
+import {Button, TextField } from "@mui/material"
+
 
 export function Form ({ addMessage }) {
     const [text, setText] = useState('')
@@ -11,11 +13,15 @@ export function Form ({ addMessage }) {
 
     return (
         <form onSubmit={addText}>
-            <input 
+            <TextField
+            id="outlined-basic"
+            label="Enter to message"
+            variant="outlined"
             type="text"
-            value={text} 
+            value={text}
+            autoFocus={true}
             onChange={event => setText(event.target.value)}/>
-            <button type="submit">Send</button>
+            <Button type="submit">Send</Button>
         </form>
     )
 }
