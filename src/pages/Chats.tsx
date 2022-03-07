@@ -1,11 +1,23 @@
-import React, { useCallback, useEffect, useState } from 'react'
-import { Form } from '../components/Form'
-import { MessageList } from '../components/MessageList'
-import { nanoid } from 'nanoid'
-import { useParams, Redirect } from 'react-router-dom'
-import {ListItemButton, ListItemText} from "@mui/material"
+import React, { useCallback, useEffect, useState } from "react";
+import { Form } from "../components/Form";
+import { MessageList } from "../components/MessageList";
+import { nanoid } from "nanoid"
+import { Link, useParams, Redirect } from "react-router-dom";
+import { WithClasses } from '../HOC/WithClasses';
 
-const StartChat = {
+// import * as style from "./Chats.module.css";
+
+export interface Message {
+    id: string;
+    text: string;
+    author: string;
+}
+
+export interface StartChat {
+    [key: string]: Message[];
+}
+
+const defaultMessages: StartChat = {
     Interesting: [
         {
             id:'1',
@@ -25,26 +37,23 @@ const StartChat = {
             id:'3',
             author: 'Admin',
             text: 'Hi, Lesson 5 React JS! You enter chats to countries'
-        }
-    ]
-}
+        },
+    ],
+};
 
 const chats = [
     {id: '1', name: "Interesting"},
     {id: '2', name: "Everything"},
     {id: '3', name: "Countries"},
-]
+];
 
-export function Chats() {
-    const [messages, setMessages] = useState(StartChat)
-    const {chatId} = useParams() // Не подгружается чаты.
-
-    // if (chats.map((i) => i.id === chatId).length === 0) {
-    //     history.push("/")
-    // }
+export const Chats: React.FC = () => {
+    const [messages, setMessages] = useState(defaultMessages);
+    const { chatId } = useParams<{ chatId?: string }>();
+    const MessageListWithClass = WithClasses(MessageList);
 
     const addSendMessage = useCallback(
-        ({ text, author }) => {
+        ({ text, author }: { text: string; author: string }) => {
             setMessages((prevMessages) => {
                 return {
                     ...prevMessages,
@@ -88,16 +97,16 @@ export function Chats() {
             <div className='chat-list'>
                 <ul>
                     {chats.map((i) => (
-                        <ListItemButton key={i.id}>
-                            <ListItemText to={`/chats/${i.id}`} primary={i.name} />
-                        </ListItemButton>
+                        <li key={i.id}>
+                            <Link to={`/chats/${i.id}`}>{i.name}</Link>
+                        </li>
                     ))}
                 </ul>
             </div>
             <div className='message-list'>
                 <h1>Chat room React JS</h1>
-                <MessageList messages={messages[`/chats${chatId}`]}/>
-                <Form addMessage={addSendMessage}/>
+                <MessageListWithClass messages={messages[`/chats${chatId}`]} classes={""}/>
+                <Form addMessage={addSendMessage} />
             </div>
         </>
     )
