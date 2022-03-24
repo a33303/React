@@ -1,3 +1,29 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: var(--color-text-primary);
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(56, 56, 56);
+
+}
+
+.menu {
+    width: 30%;
+    display: flex;
+    float: left;
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)';
+    border: 0;
+    border-radius: 3;
+    box-shadow: '0 3px 5px 2px rgba(255, 105, 135, .3)';
+    color: 'white';
+    height: 48;
+    padding: '0 30px';
+ }
+
 li {
     list-style-type: none;
     margin: 0 0 10px 0;
@@ -17,9 +43,6 @@ ul {
     flex-direction: column;
 
 }
-body {
-    font-family: 'Roboto', sans-serif;
-}
 
 Button {
     width: 100px;
@@ -32,20 +55,4 @@ Button {
 
 .container {
     display: flex;
-}
-
-.message-list {
-    width: 80%;
-    padding: 0 0 0 2%;
-}
-
-.chat-list {
-    margin: 1% 0 0 0;
-    width: 14%;
-    border-right: 1px solid;
-    text-align: center;
-}
-
-h3 {
-    text-align: center;
 }

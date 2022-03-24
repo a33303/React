@@ -1,24 +1,46 @@
-module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
+odule.exports = {
+    env: {
+      browser: true,
+      node: true,
+      es6: true,
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
+    extends: [
+      'prettier',
+      'eslint:recommended',
+      'plugin:@typescript-eslint/eslint-recommended',
+      'plugin:@typescript-eslint/recommended',
+      'plugin:prettier/recommended',
+      'plugin:react/recommended',
+      'prettier',
+      'plugin:react-hooks/recommended',
+      'plugin:storybook/recommended',
     ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
+    parserOptions: {
+      ecmaFeatures: {
+        jsx: true,
+      },
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+    },
+    plugins: ['react', 'prettier', 'react-hooks', 'jest'],
+    rules: {
+      'prettier/prettier': [
+        'error',
+        {
+          singleQuote: true,
         },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+      ],
+      'react/prop-types': 0,
+      'linebreak-style': ['error', 'unix'],
+      quotes: ['warn', 'single'],
+      semi: ['warn', 'always'],
     },
-    "plugins": [
-        "react"
+    overrides: [
+      {
+        files: ['webpack.config.js'],
+        rules: {
+          '@typescript-eslint/no-var-requires': ['off'],
+        },
+      },
     ],
-    "rules": {
-        "semi": ["error", "always"],
-        "quotes": ["error", "double"]
-    }
-}
+  };

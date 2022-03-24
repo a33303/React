@@ -1,37 +1,48 @@
-import React, { FC, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { Chat } from '../store/chatlist/reducer';
+import { useDispatch, useSelector } from 'react-redux';
+import { nanoid } from 'nanoid';
+import { addChat, deleteChat } from '../store/chatlist/actions';
+import { createMessageChat, deleteMessageChat } from '../store/messages/actions';
+import { Chat } from '../store/chatlist/types';
+import { Button, ListItemButton, TextField } from '@mui/material';
 
-interface ChatListProps {
-  addChat: (value: string) => void;
-  deleteChat: (id: string) => void;
-}
+export const ChatList: React.FC = () => {
+  const dispatch = useDispatch();
 
-export const ChatList: FC<ChatListProps> = ({ addChat, deleteChat }) => {
   const [value, setValue] = useState('');
   const chatList = useSelector((state: { chatlist: Chat[] }) => state.chatlist);
-  const handleClick = () => {
-    addChat(value);
+
+  const handleAddChat = () => {
+    const id = nanoid();
+    dispatch(addChat({ id, name: value }));
+    dispatch(createMessageChat(id));
     setValue('');
+  };
+
+  const handleDeleteChat = (chatId: string) => {
+    dispatch(deleteChat (chatId));
+    dispatch(deleteMessageChat(chatId));
   };
 
   return (
     <>
-      <input
+      <TextField
+        id="outlined-basic"
+        label="Enter names chats"
         type="text"
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
-      <button onClick={handleClick}>add chat</button>
-      <ul>
-        {chatList.map((chat) => (
-          <li key={chat.id}>
-            <Link to={`/chats/${chat.id}`}>{chat.name}</Link>
-            <button onClick={() => deleteChat(chat.id)}>delete</button>
-          </li>
+      <Button  type="submit" onClick={handleAddChat}>Add chat</Button>
+      <ul >
+        {chatList.map((i) => (
+          <li  key={i.id}>
+            <Link to={`/chats/${i.id}`}>{i.name}</Link>
+            <Button  type="submit" onClick={() => deleteChat(i.id)}>delete</Button>
+          </li >
         ))}
-      </ul>
+      </ul >
     </>
   );
 };

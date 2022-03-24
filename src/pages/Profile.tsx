@@ -1,3 +1,4 @@
+import { Button, TextField } from '@mui/material';
 import React from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 import { toggleVisible } from '../store/profile/actions';
@@ -20,6 +21,27 @@ export const Profile = () => {
         onChange={() => dispatch(toggleVisible)}
       />
       <p>{name}</p>
+      <form action="">
+                <TextField
+                    id="outlined-basic"
+                    label="Nick name"
+                    variant="outlined"
+                    type="text"
+                />
+                <TextField
+                    id="outlined-basic"
+                    label="E-mail"
+                    variant="outlined"
+                    type="text"
+                />
+                <TextField
+                    id="outlined-basic"
+                    label="Age"
+                    variant="outlined"
+                    type="text"
+                />
+                <Button type="submit">Accept</Button>
+            </form>
     </>
   );
 };

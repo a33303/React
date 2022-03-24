@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { StoreState } from '../store';
 import { toggleVisible } from '../store/profile/actions';
@@ -9,7 +9,7 @@ interface AboutProps {
   toggle: () => void;
 }
 
-export const About: FC<AboutProps> = (props) => {
+export const About: React.FC<AboutProps> = (props) => {
   return (
     <>
       <h2>About page</h2>
@@ -18,7 +18,6 @@ export const About: FC<AboutProps> = (props) => {
     </>
   );
 };
-
 const mapStateToProps = (state: StoreState) => ({
   name: state.profile.name,
   visible: state.profile.visible,
