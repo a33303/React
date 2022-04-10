@@ -1,6 +1,9 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { withRouter } from 'react-router';
+import MenuList from '@mui/material/MenuList';
+import MenuItem from '@mui/material/MenuItem'
+import "../App.css";
 
 const navigate = [
   {
@@ -25,25 +28,31 @@ const navigate = [
   },
 ];
 
-export const NavBar: FC = () => {
+const menuNavBar = {
+  width: "30%",
+  display: "flex",
+  float: "left",
+};
+
+export const NavBar: React.FC = () => {
   return (
-    <ul>
+    <div className='menuNavBAr'>
+       <MenuList >
       {navigate.map((link) => {
         return (
-          <li key={link.id}>
+          <MenuItem key={link.id}>
             <NavLink
               exact
               to={link.to}
-              style={(isActive) => ({
-                color: isActive ? 'green' : 'blue',
-              })}
             >
               {link.name}
             </NavLink>
-          </li>
+          </MenuItem >
         );
       })}
-    </ul>
+    </MenuList >
+    </div>
+   
   );
 };
 
