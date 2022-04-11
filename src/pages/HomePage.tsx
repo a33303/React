@@ -16,5 +16,5 @@ export const HomePage = () => {
           <li>Нажмите Log</li>
       </ol> */}
     </div>
-  )
+  );
 };

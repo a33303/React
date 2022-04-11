@@ -1,29 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="749c3e4d-53ff-4e9b-ad5f-7322ab7532b7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+    <list default="true" id="749c3e4d-53ff-4e9b-ad5f-7322ab7532b7" name="Changes" comment="Lesson 9">
+      <change afterPath="$PROJECT_DIR$/.eppslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PrivateRoute.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PublicRoute.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Articles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Blogs.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Signin.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/articles/actions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/articles/reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/articles/selectors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/articles/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/blogs/actions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/blogs/reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/blogs/selectors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/blogs/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppRouter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ChatList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChatsList.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Field.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form.test.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MessageList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageList.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MessageList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/__snapshots__/Form.test.tsx.snap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profiles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profiles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/global.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/About.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Chats/Chats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chats/Chats.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Not Found.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Not Found.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/chatlist/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chatlist/actions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/chatlist/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chatlist/reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/chatlist/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chatlist/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/messages/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/messages/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/messages/selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/selectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/messages/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/profile/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/profile/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/profile/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/profile/reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +60,20 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="lesson8_p2" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -49,10 +88,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/GB_1756-lesson-7" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="F:\Program Files\JetBrains\PhpStorm 2021.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="F:\Программирование\React_js\React\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="lesson8_p2" />
+    </force-push-targets>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Программирование\React_js\React\src\components" />
+      <recent name="F:\Программирование\React_js\React\src\store\blogs" />
+      <recent name="F:\Программирование\React_js\React\src\store\articles" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -65,6 +116,12 @@
       <workItem from="1646944597314" duration="197000" />
       <workItem from="1646946791702" duration="16000" />
       <workItem from="1647546785243" duration="93000" />
+      <workItem from="1647893337155" duration="172000" />
+      <workItem from="1648931648598" duration="226000" />
+      <workItem from="1648931882109" duration="3330000" />
+      <workItem from="1649355813140" duration="10968000" />
+      <workItem from="1649452914986" duration="14557000" />
+      <workItem from="1649627163299" duration="1049000" />
     </task>
     <servers />
   </component>
@@ -81,5 +138,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Lesson 8" />
+    <MESSAGE value="Lesson 8 part 2" />
+    <MESSAGE value="Lesson 9" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 9" />
   </component>
 </project>

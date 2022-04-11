@@ -11,7 +11,7 @@ import { Redirect, useParams } from 'react-router-dom';
 export const Chats: React.FC = () => {
   const { chatId } = useParams<{ chatId?: string }>();
   const MessageListWithClass = WithClasses(MessageList);
-  const messages = useSelector(selectMessages)
+  const messages = useSelector(selectMessages);
 
   if (chatId && !messages[chatId]) {
     return <Redirect to="/chats" />;

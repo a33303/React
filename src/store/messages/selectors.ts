@@ -1,5 +1,5 @@
-import { StoreState } from "..";
+import { StoreState } from '..';
 
 export function selectMessages(state: StoreState) {
-    return state.messages;
+  return state.messages;
 }

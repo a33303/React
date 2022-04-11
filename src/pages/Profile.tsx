@@ -1,15 +1,15 @@
-import { Button, TextField } from '@mui/material';
-import React from 'react';
+import { Button } from '@mui/material';
+import React, { FC } from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
-import { toggleVisible } from '../store/profile/actions';
-import {
-  getProfileVisible,
-  getProfileName,
-} from './../store/profile/selectors';
+import { authProfile, toggleVisible } from '../store/profile/actions';
+import { getProfileVisible, getProfileName } from '../store/profile/selectors';
+import { StoreState } from '../store';
+import { RouteComponentProps } from 'react-router-dom';
 
-export const Profile = () => {
+export const Profile: FC<RouteComponentProps> = (props) => {
   const visible = useSelector(getProfileVisible, shallowEqual);
   const name = useSelector(getProfileName, shallowEqual);
+  const isAuth = useSelector((state: StoreState) => state.profile.isAuth);
   const dispatch = useDispatch();
 
   return (
@@ -21,27 +21,15 @@ export const Profile = () => {
         onChange={() => dispatch(toggleVisible)}
       />
       <p>{name}</p>
-      <form action="">
-                <TextField
-                    id="outlined-basic"
-                    label="Nick name"
-                    variant="outlined"
-                    type="text"
-                />
-                <TextField
-                    id="outlined-basic"
-                    label="E-mail"
-                    variant="outlined"
-                    type="text"
-                />
-                <TextField
-                    id="outlined-basic"
-                    label="Age"
-                    variant="outlined"
-                    type="text"
-                />
-                <Button type="submit">Accept</Button>
-            </form>
+      {isAuth ? (
+        <Button type="submit" onClick={() => dispatch(authProfile(false))}>
+          Sign out
+        </Button>
+      ) : (
+        <Button type="submit" onClick={() => props.history.push('/login')}>
+          Sign In
+        </Button>
+      )}
     </>
   );
 };

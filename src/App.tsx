@@ -1,10 +1,10 @@
 import React, { Suspense } from 'react';
 import { AppRouter } from './components/AppRouter';
 import { Provider } from 'react-redux';
-import { persistor, store } from './store/index';
+import { persistor, store } from './store';
 import { PersistGate } from 'redux-persist/integration/react';
-import './App.css'
-import './components/MessageList.css'
+import './App.css';
+import './components/MessageList.module.css';
 
 export interface Message {
   id: string;

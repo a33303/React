@@ -3,9 +3,12 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
 import { addChat, deleteChat } from '../store/chatlist/actions';
-import { createMessageChat, deleteMessageChat } from '../store/messages/actions';
+import {
+  createMessageChat,
+  deleteMessageChat,
+} from '../store/messages/actions';
 import { Chat } from '../store/chatlist/types';
-import { Button, ListItemButton, TextField } from '@mui/material';
+import { Button, TextField } from '@mui/material';
 
 export const ChatList: React.FC = () => {
   const dispatch = useDispatch();
@@ -21,7 +24,7 @@ export const ChatList: React.FC = () => {
   };
 
   const handleDeleteChat = (chatId: string) => {
-    dispatch(deleteChat (chatId));
+    dispatch(deleteChat(chatId));
     dispatch(deleteMessageChat(chatId));
   };
 
@@ -34,15 +37,19 @@ export const ChatList: React.FC = () => {
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
-      <Button  type="submit" onClick={handleAddChat}>Add chat</Button>
-      <ul >
+      <Button type="submit" onClick={handleAddChat}>
+        Add chat
+      </Button>
+      <ul>
         {chatList.map((i) => (
-          <li  key={i.id}>
+          <li key={i.id}>
             <Link to={`/chats/${i.id}`}>{i.name}</Link>
-            <Button  type="submit" onClick={() => deleteChat(i.id)}>delete</Button>
-          </li >
+            <Button type="submit" onClick={() => handleDeleteChat(i.id)}>
+              delete
+            </Button>
+          </li>
         ))}
-      </ul >
+      </ul>
     </>
   );
 };

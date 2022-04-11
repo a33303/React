@@ -1,6 +1,7 @@
 import { Chat } from './types';
 export const ADD_CHAT = 'CHATLIST::ADD_CHAT';
 export const DELETE_CHAT = 'CHATLIST::DELETE_CHAT';
+export const SET_CHAT = 'CHATLIST::SET_CHAT';
 
 export const addChat = (newChat: Chat) => ({
   type: ADD_CHAT,
@@ -10,4 +11,9 @@ export const addChat = (newChat: Chat) => ({
 export const deleteChat = (chatId: string) => ({
   type: DELETE_CHAT,
   chatId,
+});
+
+export const setChat = (payload: any) => ({
+  type: SET_CHAT,
+  payload,
 });

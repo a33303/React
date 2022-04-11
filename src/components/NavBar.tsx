@@ -2,8 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import MenuList from '@mui/material/MenuList';
-import MenuItem from '@mui/material/MenuItem'
-import "../App.css";
+import MenuItem from '@mui/material/MenuItem';
+import '../App.css';
 
 const navigate = [
   {
@@ -26,33 +26,39 @@ const navigate = [
     to: '/profile',
     name: 'Профиль',
   },
+  {
+    id: 5,
+    to: '/articles',
+    name: 'Cтатьи',
+  },
+  {
+    id: 6,
+    to: '/1s',
+    name: 'Блоги',
+  },
 ];
 
-const menuNavBar = {
-  width: "30%",
-  display: "flex",
-  float: "left",
-};
+// const menuNavBar = {
+//   width: '30%',
+//   display: 'flex',
+//   float: 'left',
+// };
 
 export const NavBar: React.FC = () => {
   return (
-    <div className='menuNavBAr'>
-       <MenuList >
-      {navigate.map((link) => {
-        return (
-          <MenuItem key={link.id}>
-            <NavLink
-              exact
-              to={link.to}
-            >
-              {link.name}
-            </NavLink>
-          </MenuItem >
-        );
-      })}
-    </MenuList >
+    <div className="menuNavBAr">
+      <MenuList>
+        {navigate.map((link) => {
+          return (
+            <MenuItem key={link.id}>
+              <NavLink exact to={link.to}>
+                {link.name}
+              </NavLink>
+            </MenuItem>
+          );
+        })}
+      </MenuList>
     </div>
-   
   );
 };
 
