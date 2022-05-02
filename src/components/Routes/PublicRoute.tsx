@@ -1,13 +1,13 @@
 import React from 'react';
 import { Redirect, Route, RouteProps } from 'react-router';
 import { useSelector } from 'react-redux';
-import { StoreState } from '../store';
+import { StoreState } from '../../store';
 
 export interface PublicRouteProps extends RouteProps {
   restricted: boolean;
 }
 
-export const PublicRoute: React.FC<PublicRouteProps> = ({
+const PublicRoute: React.FC<PublicRouteProps> = ({
   restricted,
   ...routeProps
 }) => {
@@ -15,3 +15,5 @@ export const PublicRoute: React.FC<PublicRouteProps> = ({
 
   return isAuth && restricted ? <Redirect to="/" /> : <Route {...routeProps} />;
 };
+
+export default PublicRoute;

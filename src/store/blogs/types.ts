@@ -1,4 +1,4 @@
-import { ERROR, GET_BLOGS, LOADING } from './actions';
+import {ERROR_BLOGS, GET_BLOGS, LOADING_BLOGS} from './actions';
 
 export type BlogsActions = GetBlogs | FetchLoading | FetchError;
 
@@ -8,11 +8,11 @@ export interface GetBlogs {
 }
 
 export interface FetchLoading {
-  type: typeof LOADING;
+  type: typeof LOADING_BLOGS;
   loading: boolean;
 }
 
 export interface FetchError {
-  type: typeof ERROR;
+  type: typeof ERROR_BLOGS;
   error: boolean;
 }

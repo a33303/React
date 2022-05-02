@@ -24,7 +24,7 @@ export interface StoreState {
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['articles'],
+  blacklist: ['articles', 'blogs', 'profile'],
 };
 
 const rootReducer = combineReducers({

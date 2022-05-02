@@ -1,3 +1,8 @@
 .border {
-  border: 1px solid rgb(196, 196, 196);
+  background-image: url(https://i.pinimg.com/originals/51/ed/c0/51edc046eb80046ee4755ee71d0f19ca.jpg);
+  margin: 0 35% 1em 25%;
+  padding: 2% 2% 2% 2%;
+  justify-content: center;
+  overflow: auto;
+  height: 43em;
 }

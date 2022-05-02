@@ -1,6 +1,6 @@
 import { BlogsActions } from './types';
 import { Reducer } from 'redux';
-import { ERROR, GET_BLOGS, LOADING } from './actions';
+import {ERROR_BLOGS, GET_BLOGS, LOADING_BLOGS} from './actions';
 
 export interface BlogsState {
   loading: boolean;
@@ -19,13 +19,13 @@ export const blogsReducer: Reducer<BlogsState, BlogsActions> = (
   action
 ) => {
   switch (action.type) {
-    case LOADING: {
+    case LOADING_BLOGS: {
       return {
         ...state,
         loading: action.loading,
       };
     }
-    case ERROR: {
+    case ERROR_BLOGS: {
       return {
         ...state,
         error: action.error,

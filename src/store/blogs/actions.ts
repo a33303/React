@@ -1,8 +1,8 @@
 import { Dispatch } from 'redux';
 import { apiUrl2 } from '../../constants';
 
-export const LOADING = 'BLOGS::LOADING';
-export const ERROR = 'BLOGS::ERROR';
+export const LOADING_BLOGS = 'BLOGS::LOADING_BLOGS';
+export const ERROR_BLOGS = 'BLOGS::ERROR_BLOGS';
 export const GET_BLOGS = 'BLOGS::GET_BLOGS';
 
 export const getBlogs = (blogs: any) => ({
@@ -11,12 +11,12 @@ export const getBlogs = (blogs: any) => ({
 });
 
 export const fetchLoading = (loading: boolean) => ({
-  type: LOADING,
+  type: LOADING_BLOGS,
   loading,
 });
 
 export const fetchError = (error: boolean) => ({
-  type: ERROR,
+  type: ERROR_BLOGS,
   error,
 });
 

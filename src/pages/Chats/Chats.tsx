@@ -1,19 +1,16 @@
-import React from 'react';
-import { Form } from '../../components/Form';
-import { MessageList } from '../../components/MessageList';
+import React, { FC } from 'react';
+import { Form } from '../../components/Form/Form';
+import { MessageList } from '../../components/MessageList/MessageList';
+import { Redirect, useParams } from 'react-router-dom';
 import { WithClasses } from '../../HOC/WithClasses';
 import style from './Chats.module.css';
-import { ChatList } from '../../components/ChatList';
-import { useSelector } from 'react-redux';
-import { selectMessages } from '../../store/messages/selectors';
-import { Redirect, useParams } from 'react-router-dom';
+import { ChatList } from '../../components/ChatList/ChatList';
 
-export const Chats: React.FC = () => {
+export const Chats: FC<any> = ({ msgs }) => {
   const { chatId } = useParams<{ chatId?: string }>();
   const MessageListWithClass = WithClasses(MessageList);
-  const messages = useSelector(selectMessages);
 
-  if (chatId && !messages[chatId]) {
+  if (chatId && !msgs[chatId]) {
     return <Redirect to="/chats" />;
   }
 
@@ -21,7 +18,7 @@ export const Chats: React.FC = () => {
     <>
       <ChatList />
       <MessageListWithClass
-        messages={chatId ? messages[chatId] : []}
+        messages={chatId ? msgs[chatId] : []}
         classes={style.border}
       />
       <Form />

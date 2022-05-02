@@ -1,0 +1,41 @@
+.liMsg {
+  border-radius: 1em;
+  padding: 0.75em  1em;
+  margin: 0.0925em;
+  max-width: 50%;
+  align-self: flex-start;
+  background-color: #8aabec;
+  color: #ffffff;
+  border-bottom-left-radius: 0.1em;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  list-style-type: none;
+  white-space: pre-line;
+  word-wrap: break-word;
+
+}
+
+.ulMsg {
+  padding-left: 0;
+  margin: 0 0 30px 17px;
+  display: flex;
+  flex-direction: column;
+  border-color: red;
+  height: 40%;
+}
+
+.liMsgSystem {
+  border-radius: 1em;
+  padding: 0.75em  1em;
+  margin: 0.0925em;
+  align-self: flex-end;
+  background-color: #efefef;
+  border-bottom-right-radius: 0.1em;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  list-style-type: none;
+}
+
+.errLogin {
+  color: red;
+}

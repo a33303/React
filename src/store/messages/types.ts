@@ -2,6 +2,7 @@ import {
   ADD_MESSAGE,
   CREATE_MESSAGE_CHAT,
   DELETE_MESSAGE_CHAT,
+  SET_MESSAGE_CHAT,
 } from './actions';
 
 export interface Message {
@@ -20,7 +21,8 @@ export type MessageState = Message & {
 export type MessagesActions =
   | AddMessage
   | CreateMessageChat
-  | DeleteMessageChat;
+  | DeleteMessageChat
+  | SetMessageChat;
 
 export interface MessagesState {
   [key: string]: MessageState[];
@@ -41,3 +43,8 @@ export type DeleteMessageChat = {
   type: typeof DELETE_MESSAGE_CHAT;
   chatId: string;
 };
+
+export interface SetMessageChat {
+  type: typeof SET_MESSAGE_CHAT;
+  payload: any;
+}

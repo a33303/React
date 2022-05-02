@@ -1,15 +1,16 @@
 import React from 'react';
-import { Message } from '../App';
+import { Message } from '../../App';
 import styles from './MessageList.module.css';
+import {AUTHORS} from "../../constants";
 
 interface MessageListProp {
   messages: Message[];
 }
 
 export const MessageList: React.FC<MessageListProp> = ({ messages }) => (
-  <ul className={styles.ulMsg}>
+  <ul>
     {messages.map((i) => (
-      <li className={styles.liMsg} key={i.id}>
+      <li className={i.author === AUTHORS.user ? styles.liMsg : styles.liMsgSystem} key={i.id}>
         {i.author}: {i.text}
       </li>
     ))}
