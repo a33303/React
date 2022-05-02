@@ -1,9 +1,15 @@
-import { ADD_MESSAGE, CREATE_MESSAGE_CHAT,  DELETE_MESSAGE_CHAT, } from './actions';
+import {
+  ADD_MESSAGE,
+  CREATE_MESSAGE_CHAT,
+  DELETE_MESSAGE_CHAT,
+  SET_MESSAGE_CHAT,
+} from './actions';
 import { Reducer } from 'redux';
 import { nanoid } from 'nanoid';
 import { MessagesActions, MessagesState } from './types';
+import {SET_CHAT} from "../chatlist/actions";
 
-const initialChatList: MessagesState = {}
+const initialChatList: MessagesState = {};
 
 export const messagesReducer: Reducer<MessagesState, MessagesActions> = (
   state = initialChatList,
@@ -12,22 +18,22 @@ export const messagesReducer: Reducer<MessagesState, MessagesActions> = (
   switch (action.type) {
     case ADD_MESSAGE: {
       return {
-        ...state, 
-        [action.chatId]:[
+        ...state,
+        [action.chatId]: [
           ...state[action.chatId],
           {
-          id: nanoid(),
-          text: action.text,
-          author: action.author,
-        }
-      ],
+            id: nanoid(),
+            text: action.text,
+            author: action.author,
+          },
+        ],
       };
     }
     case CREATE_MESSAGE_CHAT: {
       return {
         ...state,
-        [action.chatId]:[],
-      }
+        [action.chatId]: [],
+      };
     }
     case DELETE_MESSAGE_CHAT: {
       const chats = { ...state };
@@ -35,6 +41,11 @@ export const messagesReducer: Reducer<MessagesState, MessagesActions> = (
 
       return chats;
     }
+
+    case  SET_MESSAGE_CHAT: {
+      return action.payload;
+    }
+
     default: {
       return state;
     }

@@ -1,10 +1,13 @@
-import React, { Suspense } from 'react';
-import { AppRouter } from './components/AppRouter';
+import React, { FC, Suspense } from 'react';
+// const Chats = React.lazy(() =>
+//   import('./pages/Chats').then((module) => ({
+//     default: module.Chats,
+//   }))
+// );
+import { AppRouter } from './components/AppRouter/AppRouter';
 import { Provider } from 'react-redux';
 import { persistor, store } from './store/index';
 import { PersistGate } from 'redux-persist/integration/react';
-import './App.css'
-import './components/MessageList.css'
 
 export interface Message {
   id: string;
@@ -16,7 +19,7 @@ export interface Messages {
   [key: string]: Message[];
 }
 
-export const App: React.FC = () => {
+export const App: FC = () => {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
