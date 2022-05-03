@@ -13,7 +13,7 @@ import { deleteMessageChat } from './../../store/messages/actions';
 import { onValue, set, remove } from 'firebase/database';
 import {
   chatsRef,
-  getChatListById,
+  getChatListById, getMessagesListRefId,
   getMessagesRefId,
 } from './../../services/firebase';
 import {Button, TextField} from "@mui/material";
@@ -45,9 +45,14 @@ export const ChatList: FC = () => {
 
   const handleDeleteChat = (chatId: string) => {
     remove(getChatListById(chatId));
+    remove(getMessagesRefId(chatId));
     // dispatch(deleteChat(chatId));
     // dispatch(deleteMessageChat(chatId));
   };
+
+  // const hangleDeleteMassage = (chatId: string) => {
+  //   remove(getMessagesRefId(chatId));
+  // }
 
   return (
     <>

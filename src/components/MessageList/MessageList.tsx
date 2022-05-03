@@ -7,6 +7,7 @@ interface MessageListProp {
   messages: Message[];
 }
 
+
 export const MessageList: React.FC<MessageListProp> = ({ messages }) => (
   <ul>
     {messages.map((i) => (
