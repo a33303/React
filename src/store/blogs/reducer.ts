@@ -1,6 +1,7 @@
 import { BlogsActions } from './types';
 import { Reducer } from 'redux';
 import {ERROR_BLOGS, GET_BLOGS, LOADING_BLOGS} from './actions';
+import {createReducer} from "@reduxjs/toolkit";
 
 export interface BlogsState {
   loading: boolean;

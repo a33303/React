@@ -2,43 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="749c3e4d-53ff-4e9b-ad5f-7322ab7532b7" name="Changes" comment="Lesson 10 - part 1">
-      <change afterPath="$PROJECT_DIR$/src/components/Form/Form.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MessageList/MessageList.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavBar/NavBar.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Routes/PrivateRoute.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Routes/PublicRoute.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/SignUp.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/firebase.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppRouter/AppRouter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChatList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatList/ChatList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MessageList.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MessageList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageList/MessageList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/NavBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PrivateRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PrivateRoute.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profiles.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PublicRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PublicRoute.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Blogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Blogs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Chats/Chats.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chats/Chats.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Chats/Chats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chats/Chats.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Signin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignIn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/blogs/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/blogs/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChatList/ChatList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatList/ChatList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MessageList/MessageList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageList/MessageList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/firebase.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/blogs/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/blogs/reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/blogs/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/blogs/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/chatlist/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chatlist/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/chatlist/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chatlist/reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/chatlist/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chatlist/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/messages/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/messages/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/messages/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson_9" />
+        <entry key="$PROJECT_DIR$" value="lesson-10" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,6 +45,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="26D3zOLO1Ar878TJe3R0NysUY9Z" />
   <component name="ProjectViewState">
@@ -136,7 +110,7 @@
       <workItem from="1651526978848" duration="27000" />
       <workItem from="1651527093859" duration="380000" />
       <workItem from="1651527522998" duration="373000" />
-      <workItem from="1651527947486" duration="1292000" />
+      <workItem from="1651527947486" duration="6655000" />
     </task>
     <task id="LOCAL-00001" summary="Lesson 9">
       <created>1649647117526</created>
@@ -145,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649647117526</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Lesson 10 - part 1">
+      <created>1651529361144</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651529361159</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +147,7 @@
     <MESSAGE value="Lesson 8" />
     <MESSAGE value="Lesson 8 part 2" />
     <MESSAGE value="Lesson 9" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 9" />
+    <MESSAGE value="Lesson 10 - part 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 10 - part 1" />
   </component>
 </project>
